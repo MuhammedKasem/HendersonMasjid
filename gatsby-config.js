@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,7 +10,13 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `wz7mlrl6zaa3`,
+        accessToken: process.env.TOKEN,
+      },
+    }, `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
