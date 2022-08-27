@@ -1,5 +1,4 @@
 import * as React from "react"
-// import { Link } from "gatsby"
 import HeroSection from "../components/HeroSection/"
 import Image from "../components/image"
 

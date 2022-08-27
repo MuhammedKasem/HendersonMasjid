@@ -2,6 +2,7 @@ import React from "react"
 import "./HeroSection.css"
 import { Button } from "../ButtonElements"
 import PrayerTimes from "../PrayerTimes/PrayerTimes" 
+import { Link } from "gatsby"
 
 function HeroSection() {
   return (
@@ -11,7 +12,7 @@ function HeroSection() {
       <p className="goalTxt">Our Goal: $200,000</p>
       <p className="raisedTxt">Total Raised: $86,000</p>
       <div className="hero-btns">
-        <Button fontBig big primary>Donate</Button>
+        <Link to="/donate"><Button fontBig big primary>Donate</Button></Link>
       </div>
       <div className="quoteContainer">
         <p> مَنْ بَنَى مَسْجِدًا لِلَّهِ كَمَفْحَصِ قَطَاةٍ أَوْ أَصْغَرَ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ</p>

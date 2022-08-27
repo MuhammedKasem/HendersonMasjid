@@ -1,0 +1,28 @@
+.donateContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background: url(../../images/donateimage.jpg) center center/ cover no-repeat;
+  height: 100vh;
+  object-fit: contain;
+  margin-top: -80px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: solid green 10px;
+  text-align: center;
+  padding: 10px;
+  gap: 20px;
+  /* backdrop-filter: blur(20px); */
+  background: white;
+}
+
+.hadith {
+  border: solid black 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
