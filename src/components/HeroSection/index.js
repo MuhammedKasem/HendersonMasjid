@@ -1,6 +1,7 @@
 import React from "react"
 import "./HeroSection.css"
 import { Button } from "../ButtonElements"
+import PrayerTimes from "../PrayerTimes/PrayerTimes" 
 
 function HeroSection() {
   return (
@@ -16,6 +17,10 @@ function HeroSection() {
         <p> مَنْ بَنَى مَسْجِدًا لِلَّهِ كَمَفْحَصِ قَطَاةٍ أَوْ أَصْغَرَ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ</p>
         <p> "Whoever builds a masjid for the sake of Allah Almighty, like a sparrow's nest or even smaller, Allah Almighty will build for him a house in Paradise."</p>
       </div>
+      <PrayerTimes />
+      <div>
+      </div>
+
     </div>
   )
 }

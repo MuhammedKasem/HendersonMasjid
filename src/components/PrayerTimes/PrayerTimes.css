@@ -1,0 +1,8 @@
+.prayerBox {
+  display: flex;
+  flex-direction: column;
+  border: black solid 2px;
+  background: white;
+  opacity: 0.8;
+  padding: 20px;
+}
