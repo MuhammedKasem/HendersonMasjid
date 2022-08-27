@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { DiScala } from 'react-icons/Di'
 import { FaMoon } from 'react-icons/fa'
 import { Link } from 'gatsby'
 

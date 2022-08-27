@@ -14,13 +14,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `wz7mlrl6zaa3`,
-        accessToken: process.env.TOKEN,
-      },
-    }, `gatsby-plugin-image`,
+     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,3 +40,12 @@ module.exports = {
     },
   ],
 }
+
+
+// {
+//       resolve: `gatsby-source-contentful`,
+//       options: {
+//         spaceId: `wz7mlrl6zaa3`,
+//         accessToken: process.env.TOKEN,
+//       },
+//     },

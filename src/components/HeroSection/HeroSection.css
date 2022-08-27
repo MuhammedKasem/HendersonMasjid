@@ -14,10 +14,16 @@
 
 }
 
+@media screen and (max-width: 960px) {
+  .hero-container {
+    height: 100%;
+  }
+}
+
 .hero-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: 0px;
+  margin-top: 60px;
 }
 
 .hero-container > p {

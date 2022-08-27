@@ -27,11 +27,26 @@ fetch('http://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United Sta
   return ( data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>
-      <p>Fajr: {data.timings.Fajr}</p>
-      <p>Dhuhr: {data.timings.Dhuhr}</p>
-      <p>Asr: {data.timings.Asr} </p>
-      <p>Maghrib: {data.timings.Maghrib}</p>
-      <p>Isha: {data.timings.Isha}</p>
+      <div className="fajr">
+      <p>Fajr: </p>
+      <p>{data.timings.Fajr}</p>
+      </div>
+      <div className="dhuhr">
+      <p>Dhuhr:</p>
+      <p>{data.timings.Dhuhr}</p>
+      </div>
+      <div className="asr">
+      <p>Asr:</p> 
+      <p>{data.timings.Asr} </p>
+      </div>
+      <div className="maghrib">
+      <p>Maghrib:</p> 
+      <p>{data.timings.Maghrib}</p>
+      </div>
+      <div className="isha">
+      <p>Isha: </p> 
+      <p>{data.timings.Isha}</p>
+      </div>
     </div> : <div>Waiting</div>
   )
 }

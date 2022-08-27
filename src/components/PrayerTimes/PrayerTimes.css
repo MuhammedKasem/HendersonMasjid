@@ -1,8 +1,26 @@
 .prayerBox {
   display: flex;
   flex-direction: column;
-  border: black solid 2px;
+  border: green solid 8px;
+  border-radius: 10px;
   background: white;
   opacity: 0.8;
   padding: 20px;
+  position: fixed;
+  right: 0;
+  height: 35%;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.fajr, .dhuhr, .asr, .maghrib, .isha {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 960px) {
+ .prayerBox {
+   position: relative;
+   width: 80%;
+   height: 100%;
+ } 
 }
