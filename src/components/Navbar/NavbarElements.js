@@ -13,7 +13,7 @@ top: 0;
 z-index: 999;
 
 @media screen and (max-width: 960px) {
-background: ${({ click }) => (click ? "fff" : "transparent")};
+background: ${({ click }) => (click ? "fff" : "linear-gradient(#13e816, skyblue)")};
 transition: 0.8s all ease;
 }
 `

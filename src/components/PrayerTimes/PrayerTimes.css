@@ -2,19 +2,26 @@
   display: flex;
   flex-direction: column;
   border: green solid 8px;
-  border-radius: 10px;
-  background: white;
-  opacity: 0.8;
+  border-right: 0;
+  border-radius: 30px 0px 0px 30px;
+  /* background: white; */
+  /* opacity: 0.8; */
   padding: 20px;
   position: fixed;
   right: 0;
-  height: 35%;
   gap: 5px;
   justify-content: space-between;
+  backdrop-filter: blur(10px);
 }
 
 .fajr, .dhuhr, .asr, .maghrib, .isha {
   font-size: 1.5rem;
+}
+
+.time {
+  color: #13e816;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 @media screen and (max-width: 960px) {
@@ -22,5 +29,8 @@
    position: relative;
    width: 80%;
    height: 100%;
+   border: green solid 8px;
+   border-radius: 30px;
+   background: white;
  } 
 }

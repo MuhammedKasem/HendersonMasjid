@@ -12,7 +12,7 @@ const Image = () => {
         <StaticImage src="../images/masjid4.jpg" className="image-item" alt=""/>
         <StaticImage src="../images/masjid2.jpg" className="image-item" alt=""/>
         <StaticImage src="../images/masjid3.jpg" className="image-item" alt=""/>
-        <StaticImage src="../images/quranimg.jpg" className="image-item" alt=""/>
+        <StaticImage src="../images/quranimg.jpg" className="image-item" alt="test"/>
       </div>
     </div>
   )

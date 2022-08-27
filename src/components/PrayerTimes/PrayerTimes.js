@@ -23,29 +23,37 @@ fetch('http://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United Sta
     console.error(err)
     data = null;
   });
+  
+  // let quran = require('quran');
+  //
+  // quran.get(2,1, function(err, verse) {
+  //   if (!err) {
+  //     console.log("Verse: 1 Chapter 1: " + verse.english);
+  //   }
+  // });
 
   return ( data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>
       <div className="fajr">
       <p>Fajr: </p>
-      <p>{data.timings.Fajr}</p>
+      <p className="time">{data.timings.Fajr}</p>
       </div>
       <div className="dhuhr">
       <p>Dhuhr:</p>
-      <p>{data.timings.Dhuhr}</p>
+      <p className="time">{data.timings.Dhuhr}</p>
       </div>
       <div className="asr">
       <p>Asr:</p> 
-      <p>{data.timings.Asr} </p>
+      <p className="time">{data.timings.Asr} </p>
       </div>
       <div className="maghrib">
       <p>Maghrib:</p> 
-      <p>{data.timings.Maghrib}</p>
+      <p className="time">{data.timings.Maghrib}</p>
       </div>
       <div className="isha">
       <p>Isha: </p> 
-      <p>{data.timings.Isha}</p>
+      <p className="time">{data.timings.Isha}</p>
       </div>
     </div> : <div>Waiting</div>
   )
