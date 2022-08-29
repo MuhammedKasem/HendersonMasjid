@@ -7,6 +7,17 @@
   height: 100vh;
   object-fit: contain;
   margin-top: -80px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+  .donateContainer {
+    height: 100%;
+  }
+}
+
+.heroTitle {
+  margin-top: 80px;
 }
 
 .infoBox {
@@ -21,8 +32,16 @@
   background: white;
 }
 
+
+@media screen and (max-width: 960px) {
+  .infoBox {
+    width: 90%;
+  }
+}
+
 .hadith {
   border: solid black 5px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px;
+  background-color: #13e816;
 }
