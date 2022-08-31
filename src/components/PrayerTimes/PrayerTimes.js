@@ -12,7 +12,7 @@ const options = {
 const PrayerTimes = () => {
   let [data, setData] = React.useState(null);
   
-fetch('http://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United States&method=8, options')
+fetch('http://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United States&method=8s')
   .then((response) => {
       return response.json();
     })
