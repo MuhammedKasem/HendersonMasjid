@@ -24,14 +24,6 @@ fetch('http://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United Sta
     data = null;
   });
   
-  // let quran = require('quran');
-  //
-  // quran.get(2,1, function(err, verse) {
-  //   if (!err) {
-  //     console.log("Verse: 1 Chapter 1: " + verse.english);
-  //   }
-  // });
-
   return ( data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>
