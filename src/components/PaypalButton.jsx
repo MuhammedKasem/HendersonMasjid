@@ -34,7 +34,7 @@ const DonateButton = () => {
             <button className="presetAmt">Custom</button>
           </div>
           <div className="flexRow">
-          <span>$</span><input className="inputPayment" type="text" onChange={(e) => {setPrice(e.target.value); console.log(price);}} value={price} />
+          <span>$</span><input className="inputPayment" type="number" onChange={(e) => {setPrice(e.target.value); console.log(price);}} value={price} />
           </div>
       <PayPalScriptProvider options={{ "client-id": "AfBJ2Ey_RvEdKSmwVn5T1MvqpVBDbUtSVSFkO1MHvLg17XoyAia9zd9Hme5zR0er0oWb9-XCgkEDdpdF" }}>
           <PayPalButtons
