@@ -22,6 +22,16 @@
   width: 50%;
   justify-content: center;
   align-self: center;
+  border: black solid 5px;
+  border-radius: 15px;
+  padding: 10px;
+  background: gray;
+}
+
+@media screen and (max-width: 960px) {
+  .paypalBtns {
+    width: 100%;
+  }
 }
 
 .inputPayment {
@@ -40,7 +50,9 @@
 .presetAmt {
   height: 80px;
   width: 80px;
-  background-color: lightcyan;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
   
 }
 
