@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 10px;
   background: url(../../images/donateimage.jpg) center center/ cover no-repeat;
-  height: 100vh;
+  height: 100%;
   object-fit: contain;
   margin-top: -80px;
   justify-content: center;
@@ -14,6 +14,27 @@
   .donateContainer {
     height: 100%;
   }
+}
+
+.paypalBtns {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-self: center;
+}
+
+.inputPayment {
+  width: 20%;
+  align-self: center;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: center;
 }
 
 .heroTitle {

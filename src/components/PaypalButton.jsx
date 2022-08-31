@@ -1,40 +1,51 @@
-import React, { useEffect, useMemo, useRef } from 'react';
-import { Script } from 'gatsby'
-let counter = 0;
-
-const generateId = () => {
-  return `ID-${++counter}`; // if it is necessary, use some better unique id generator
-};
-
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
 const DonateButton = () => {
-  const buttonRef = useRef(null);
-  const buttonId = useMemo(() => `ID-${generateId()}`, []);
-  let button;
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      console.log(window.PayPal)
-      button = window.PayPal.Donation.Button({
-        env: 'production',
-        hosted_button_id: 'AUfYW36a-W81IrHKFFlsnDLFTT9dbYBnjoT3TC4DCvfKrw7mRdlb_ACx4jj_HauuU3ulbZ8UHoqtrs-e',
-        image: {
-          src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-          alt: 'Donate with PayPal button',
-          title: 'PayPal - The safer, easier way to pay online!',
-        }
-      });
-      button.render(`#${buttonRef.current.id}`); // you can change the code and run it when DOM is ready
-    }
-  }, []);
+  const [price, setPrice] = useState(1);
+
+  const createOrder = (data, actions) => {
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: price,
+          },
+        },
+      ],
+    });
+  }
+
+  const onApprove = (data, actions) => {
+    console.log(data);
+    return actions.order.capture();
+  }
+
   return (
     <>
-      <Script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charSet="UTF-8" onError={() => {
-        console.log("error")
-      }} onLoad={() => {
-        console.log(window.PayPal)
-      }} />
-      <div ref={buttonRef} id={buttonId} />
+
+      <PayPalScriptProvider options={{ "client-id": "AfBJ2Ey_RvEdKSmwVn5T1MvqpVBDbUtSVSFkO1MHvLg17XoyAia9zd9Hme5zR0er0oWb9-XCgkEDdpdF" }}>
+        <div className="paypalBtns">
+          <div className="flexRow">
+          <span>$</span><input className="inputPayment" type="text" onChange={e => setPrice(e.target.value)} value={price} />
+          </div>
+          <PayPalButtons
+            style={{
+              color: "silver",
+              shape: "pill",
+            }}
+            // forceReRender={[price]}
+            createOrder={(data, actions) => createOrder(data, actions)}
+            onApprove={(data, actions) => onApprove(data, actions)}
+          >
+
+          </PayPalButtons>
+        </div>
+
+      </PayPalScriptProvider>
     </>
   );
 };
 
 export default DonateButton;
+
+            // alert("Thank you for donating " + name + "! JazakaAllahu Khair");
