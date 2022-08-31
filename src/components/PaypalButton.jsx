@@ -18,8 +18,11 @@ const DonateButton = () => {
 
   const onApprove = (data, actions) => {
     console.log(data);
+    alert("Thank you for donating " + data.name + "! JazakaAllahu Khair");
     return actions.order.capture();
   }
+
+
 
   return (
     <>
@@ -53,4 +56,3 @@ const DonateButton = () => {
 
 export default DonateButton;
 
-            // alert("Thank you for donating " + name + "! JazakaAllahu Khair");

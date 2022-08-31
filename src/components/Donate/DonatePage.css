@@ -25,7 +25,7 @@
   border: black solid 5px;
   border-radius: 15px;
   padding: 10px;
-  background: gray;
+  background: lightgray;
 }
 
 @media screen and (max-width: 960px) {
@@ -39,7 +39,7 @@
   align-self: center;
   margin-bottom: 10px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .flexRow {
@@ -48,12 +48,18 @@
 }
 
 .presetAmt {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   background-color: black;
   border-radius: 10px;
   color: white;
-  
+}
+
+@media screen and (max-width: 960px) {
+  .presetAmt {
+    height: 50px;
+    width: 60px;
+  }
 }
 
 .presetAmounts {
