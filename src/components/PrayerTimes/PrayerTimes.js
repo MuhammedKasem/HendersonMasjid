@@ -26,7 +26,7 @@ fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20
   });
   },[])
 
-  
+
   return ( data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>

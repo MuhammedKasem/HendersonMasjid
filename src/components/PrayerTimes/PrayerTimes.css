@@ -12,6 +12,7 @@
   gap: 5px;
   justify-content: space-between;
   backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 .fajr, .dhuhr, .asr, .maghrib, .isha {
@@ -32,5 +33,7 @@
    border: green solid 8px;
    border-radius: 30px;
    background: white;
+   align-self: center;
+   text-align: center;
  } 
 }

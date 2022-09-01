@@ -18,9 +18,8 @@ const DonatePage = () => {
             The community center is conveniently located near Highway 85, Highway 39, and US 1. It will serve as a center for Muslims in both North Carolina and Virginia.
           </p>
           <DonateButton></DonateButton>
-          <PrayerTimes />
+          <PrayerTimes/>
         </div>
-
       </div>
     </>
   )
