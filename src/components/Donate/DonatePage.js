@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import "./DonatePage.css"
-import { Script } from 'gatsby'
 import DonateButton from '../PaypalButton'
 import PrayerTimes from '../PrayerTimes/PrayerTimes.js'
 

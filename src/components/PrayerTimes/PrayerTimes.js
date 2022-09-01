@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../PrayerTimes/PrayerTimes.css"
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '24336d6acfmsh4a76f6be5740e4fp1c5c78jsne235e5f7cf6b',
-		'X-RapidAPI-Host': 'aladhan.p.rapidapi.com'
-	}
-};
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '24336d6acfmsh4a76f6be5740e4fp1c5c78jsne235e5f7cf6b',
+// 		'X-RapidAPI-Host': 'aladhan.p.rapidapi.com'
+// 	}
+// };
 
 const PrayerTimes = () => {
   let [data, setData] = React.useState(null);
   
-fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United States&method=8s')
+useEffect(()=> {
+fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=8s', { method:'GET', mode: 'cors'})
   .then((response) => {
       return response.json();
     })
@@ -23,6 +24,8 @@ fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United St
     console.error(err)
     data = null;
   });
+  },[])
+
   
   return ( data ?
     <div className="prayerBox">
