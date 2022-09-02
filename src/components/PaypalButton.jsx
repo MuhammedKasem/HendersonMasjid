@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
 
 const DonateButton = () => {
-  
+
   const ref = useRef()
   const [height, setHeight] = useState(0)
 
-useEffect(() => {
+  useEffect(() => {
     document.onreadystatechange = () => {
       console.log(ref.current.clientHeight);
       setHeight(ref.current.clientHeight);
@@ -35,11 +35,10 @@ useEffect(() => {
   }
 
 
-      console.log(height);
+  console.log(height);
   return (
     <>
-      <div ref={ref} className="paypalWrapper">
-        <div className="paypalBtns" style={{minHeight: height}}>
+        <div className="paypalBtns" >
           <div className="presetAmounts">
             <button onClick={() => setPrice(50)} className="presetAmt">$50</button>
             <button onClick={() => setPrice(100)} className="presetAmt">$100</button>
@@ -49,20 +48,21 @@ useEffect(() => {
           <div className="flexRow">
             <span>$</span><input className="inputPayment" type="number" onChange={(e) => { setPrice(e.target.value); console.log(price); }} value={price} />
           </div>
-          <PayPalScriptProvider options={{ "client-id": "AfBJ2Ey_RvEdKSmwVn5T1MvqpVBDbUtSVSFkO1MHvLg17XoyAia9zd9Hme5zR0er0oWb9-XCgkEDdpdF" }}>
-            <PayPalButtons
-              style={{
-                color: "silver",
-                shape: "pill",
-              }}
-              forceReRender={[price]}
-              createOrder={(data, actions) => createOrder(data, actions)}
-              onApprove={(data, actions) => onApprove(data, actions)}
-            >
-            </PayPalButtons>
-          </PayPalScriptProvider>
+          <div ref={ref} className="buttonWrapper" style = {{ minHeight: height}}>
+            <PayPalScriptProvider options={{ "client-id": "AfBJ2Ey_RvEdKSmwVn5T1MvqpVBDbUtSVSFkO1MHvLg17XoyAia9zd9Hme5zR0er0oWb9-XCgkEDdpdF" }}>
+              <PayPalButtons
+                style={{
+                  color: "silver",
+                  shape: "pill",
+                }}
+                forceReRender={[price]}
+                createOrder={(data, actions) => createOrder(data, actions)}
+                onApprove={(data, actions) => onApprove(data, actions)}
+              >
+              </PayPalButtons>
+            </PayPalScriptProvider>
+          </div>
         </div>
-      </div>
 
     </>
   );
