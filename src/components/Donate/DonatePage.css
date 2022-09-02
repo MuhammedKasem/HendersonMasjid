@@ -83,6 +83,8 @@
   gap: 20px;
   /* backdrop-filter: blur(20px); */
   background: white;
+  height: 100%;
+  min-height: 100%;
 }
 
 
@@ -99,3 +101,7 @@
   background-color: #13e816;
 }
 
+.paypalWrapper {
+  display: flex;
+  justify-content: center;
+}

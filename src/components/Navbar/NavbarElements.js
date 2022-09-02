@@ -83,6 +83,7 @@ export const NavItem = styled.li`
   }
 `
 export const NavLinks = styled(Link)`
+  font-size: 1.3rem;
   color: #141414;
   display: flex;
   align-items: center;

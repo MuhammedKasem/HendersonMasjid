@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./DonatePage.css"
 import DonateButton from '../PaypalButton'
 import PrayerTimes from '../PrayerTimes/PrayerTimes.js'
