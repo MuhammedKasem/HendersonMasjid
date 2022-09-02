@@ -29,7 +29,9 @@
 .hero-container > p {
   margin-top: 8px;
   color: #fff;
-  font-size: 32px;
+  font-size: 38px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 @media screen and (max-width: 960px) {
@@ -63,4 +65,13 @@
   .quoteContainer {
       width: 80%;
     }
+  }
+
+
+  #raisedTxt {
+    color: #13e816;
+  }
+
+  #goalTxt {
+    color: gold;
   }
