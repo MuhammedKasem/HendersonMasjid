@@ -9,7 +9,7 @@ const DonateButton = () => {
   // Used to get the height of the ref element and update the state of height
   setTimeout(() => {
     setHeight(ref.current.clientHeight)
-  }, 1000)
+  }, 200)
 
   const [price, setPrice] = useState(100);
   const createOrder = (data, actions) => {

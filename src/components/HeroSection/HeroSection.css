@@ -1,5 +1,5 @@
 
-.hero-container {
+.main-container {
   background: url("../../images/masjidhero.jpg") center center/ cover no-repeat;
   height: 100vh;
   width: 100%;
@@ -16,18 +16,18 @@
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container {
+  .main-container {
     height: 100%;
   }
 }
 
-.hero-container > h1 {
+.main-container > h1 {
   color: #fff;
   font-size: 100px;
   margin-top: 80px;
 }
 
-.hero-container > p {
+.main-container > p {
   margin-top: 8px;
   color: #fff;
   font-size: 38px;
@@ -36,17 +36,17 @@
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
+  .main-container > h1 {
     font-size: 70px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
+  .main-container > h1 {
     font-size: 60px;
   }
 
-  .hero-container > p {
+  .main-container > p {
     font-size: 30px;
   }
 }
@@ -75,4 +75,9 @@
 
   #goalTxt {
     color: gold;
+  }
+
+
+  .hero-container {
+    display: flex;
   }

@@ -35,7 +35,7 @@ const PrayerTimes = () => {
     <div className="prayerBox">
       <h1>Prayer Times</h1>
       <div className="fajr">
-        <p>Fajr: </p>
+        <p>Fajr:</p>
         <p className="time">{tConvert(data.timings.Fajr)}</p>
       </div>
       <div className="dhuhr">
@@ -51,10 +51,10 @@ const PrayerTimes = () => {
         <p className="time">{tConvert(data.timings.Maghrib)}</p>
       </div>
       <div className="isha">
-        <p>Isha: </p>
+        <p>Isha:</p>
         <p className="time">{tConvert(data.timings.Isha)}</p>
       </div>
-    </div> : <div>Waiting</div>
+    </div> : <div>Waiting for Prayer Times</div>
   )
 }
 

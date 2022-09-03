@@ -1,7 +1,7 @@
 .prayerBox {
   display: flex;
   flex-direction: column;
-  border: green solid 8px;
+  border: green solid 3px;
   border-right: 0;
   border-radius: 30px 0px 0px 30px;
   /* background: white; */
