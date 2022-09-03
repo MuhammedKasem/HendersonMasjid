@@ -7,13 +7,10 @@ const DonateButton = () => {
   const [height, setHeight] = useState(0)
 
   // Used to get the height of the ref element and update the state of height
-  useEffect(() => {
-    document.onreadystatechange = () => {
-      console.log(ref.current.clientHeight);
-      setHeight(ref.current.clientHeight);
-
-    };
-  }, []);
+  setTimeout(() => {
+    console.log("Timeout fired - ref is " + ref)
+    setHeight(ref.current.clientHeight)
+  }, 1000)
 
   const [price, setPrice] = useState(100);
   const createOrder = (data, actions) => {
@@ -35,7 +32,6 @@ const DonateButton = () => {
     return actions.order.capture();
   }
 
-  console.log(height);
   return (
     <>
       <div className="paypalBtns" >
