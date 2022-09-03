@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 
 export const Nav = styled.nav`
 background: ${({ active }) => active ? "linear-gradient(#13e816, skyblue)" : "linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100% )"};
+#13e816
 height: 80px;
 display: flex;
 justify-content: center;

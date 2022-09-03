@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
 
 const DonateButton = () => {
@@ -8,7 +8,6 @@ const DonateButton = () => {
 
   // Used to get the height of the ref element and update the state of height
   setTimeout(() => {
-    console.log("Timeout fired - ref is " + ref)
     setHeight(ref.current.clientHeight)
   }, 1000)
 

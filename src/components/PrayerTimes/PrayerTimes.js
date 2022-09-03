@@ -1,54 +1,58 @@
 import React, { useEffect } from 'react'
 import "../PrayerTimes/PrayerTimes.css"
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '24336d6acfmsh4a76f6be5740e4fp1c5c78jsne235e5f7cf6b',
-// 		'X-RapidAPI-Host': 'aladhan.p.rapidapi.com'
-// 	}
-// };
 
 const PrayerTimes = () => {
   let [data, setData] = React.useState(null);
-  
-useEffect(()=> {
-fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=8s', { method:'GET', mode: 'cors'})
-  .then((response) => {
-      return response.json();
-    })
-  .then((data) => {
-    setData(data['data']);
-  })
-	.catch(err => {
-    console.error(err)
-    data = null;
-  });
-  },[])
 
+  useEffect(() => {
+    fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=8s', { method: 'GET', mode: 'cors' })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setData(data['data']);
+      })
+      .catch(err => {
+        console.error(err)
+        data = null;
+      });
+  }, [])
 
-  return ( data ?
+  function tConvert(time) {
+    // Check correct time format and split into components
+    time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+    if (time.length > 1) { // If time format correct
+      time = time.slice(1);  // Remove full string match value
+      time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
+      time[0] = +time[0] % 12 || 12; // Adjust hours
+    }
+    return time.join(''); // return adjusted time or original string
+  }
+
+  return (data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>
       <div className="fajr">
-      <p>Fajr: </p>
-      <p className="time">{data.timings.Fajr}</p>
+        <p>Fajr: </p>
+        <p className="time">{tConvert(data.timings.Fajr)}</p>
       </div>
       <div className="dhuhr">
-      <p>Dhuhr:</p>
-      <p className="time">{data.timings.Dhuhr}</p>
+        <p>Dhuhr:</p>
+        <p className="time">{tConvert(data.timings.Dhuhr)}</p>
       </div>
       <div className="asr">
-      <p>Asr:</p> 
-      <p className="time">{data.timings.Asr} </p>
+        <p>Asr:</p>
+        <p className="time">{tConvert(data.timings.Asr)} </p>
       </div>
       <div className="maghrib">
-      <p>Maghrib:</p> 
-      <p className="time">{data.timings.Maghrib}</p>
+        <p>Maghrib:</p>
+        <p className="time">{tConvert(data.timings.Maghrib)}</p>
       </div>
       <div className="isha">
-      <p>Isha: </p> 
-      <p className="time">{data.timings.Isha}</p>
+        <p>Isha: </p>
+        <p className="time">{tConvert(data.timings.Isha)}</p>
       </div>
     </div> : <div>Waiting</div>
   )

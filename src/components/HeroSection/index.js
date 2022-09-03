@@ -9,8 +9,8 @@ function HeroSection() {
     <div className="hero-container">
       <h1>Donate Today!</h1>
       <p>Help support your masjid!</p>
-      <p id="raisedTxt">Total Raised: $86,000</p>
-      <p id="goalTxt">Our Goal: $200,000</p>
+      <p id="raisedTxt">Total Raised: $220,000</p>
+      <p id="goalTxt">Our Goal: $800,000</p>
       <div className="hero-btns">
         <Link to="/donate"><Button fontBig big primary>Donate</Button></Link>
       </div>
