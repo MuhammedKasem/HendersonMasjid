@@ -6,12 +6,13 @@ const PrayerTimes = () => {
   let [data, setData] = React.useState(null);
 
   useEffect(() => {
-    fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=8s', { method: 'GET', mode: 'cors' })
+    fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=2s', { method: 'GET', mode: 'cors' })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         setData(data['data']);
+        console.log(data);
       })
       .catch(err => {
         console.error(err)
@@ -34,6 +35,7 @@ const PrayerTimes = () => {
   return (data ?
     <div className="prayerBox">
       <h1>Prayer Times</h1>
+      <h2><u>{data.date.gregorian.weekday.en}</u></h2>
       <div className="fajr">
         <p>Fajr:</p>
         <p className="time">{tConvert(data.timings.Fajr)}</p>
