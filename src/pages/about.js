@@ -10,6 +10,6 @@ const About = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="About" />
 
 export default About

@@ -10,6 +10,6 @@ const Donate = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Page three" />
+export const Head = () => <Seo title="Donate" />
 
 export default Donate
