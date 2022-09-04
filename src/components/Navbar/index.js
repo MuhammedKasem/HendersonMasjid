@@ -33,12 +33,15 @@ const Navbar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-              <NavMenu onClick={handleClick} click={click}>
+            <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">Home</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/about">About</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/updates">Updates</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/donate">Donate</NavLinks>
