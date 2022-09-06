@@ -36,9 +36,10 @@ export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 `
 
 export const NavIcon = styled(FaMoon)`
