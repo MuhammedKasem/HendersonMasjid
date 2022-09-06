@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: solid green 10px;
+  border: solid black 10px;
   border-radius: 30px;
   text-align: left;
   padding: 40px;
@@ -95,10 +95,12 @@
 }
 
 .hadith {
-  border: solid black 5px;
+  border: solid gold 5px;
+  color: white;
   border-radius: 10px;
   padding: 15px;
   background-color: #13e816;
+  background-color: black;
 }
 
 .paypalWrapper {

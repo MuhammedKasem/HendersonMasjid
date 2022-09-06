@@ -3,7 +3,10 @@ import { FaMoon } from 'react-icons/fa'
 import { Link } from 'gatsby'
 
 export const Nav = styled.nav`
-background: linear-gradient(#13e816, lightgreen);
+// background: linear-gradient(#13e816, lightgreen);
+background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+color: white;
 height: 80px;
 display: flex;
 justify-content: center;
@@ -28,7 +31,7 @@ max-width: 1000px;
 `
 
 export const NavLogo = styled(Link)`
-  color: #141414;
+  color: white;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -40,6 +43,7 @@ export const NavLogo = styled(Link)`
 export const NavIcon = styled(FaMoon)`
   margin: 0 0.5rem 0 2rem; 
 `
+
 
 export const MobileIcon = styled.div`
 display: none;
@@ -77,6 +81,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  color: white;
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -84,13 +89,13 @@ export const NavItem = styled.li`
 `
 export const NavLinks = styled(Link)`
   font-size: 1.3rem;
-  color: #141414;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1 rem;
   height: 100%;
   font-family: "Ubuntu", sans-serif;
+  color: white;
 
   @media screen and (max-width: 960px) {
     text-align: center;

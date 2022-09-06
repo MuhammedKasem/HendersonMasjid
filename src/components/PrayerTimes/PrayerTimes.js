@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import "../PrayerTimes/PrayerTimes.css"
-
+import MasjidLogo from '../../images/masjid-80px.png'
+import Masjid150 from '../../images/masjid-150px.png'
 
 const PrayerTimes = () => {
   let [data, setData] = React.useState(null);
@@ -34,6 +35,7 @@ const PrayerTimes = () => {
 
   return (data ?
     <div className="prayerBox">
+      <img src={Masjid150} height="100px" width="80px"/>
       <h1>Prayer Times</h1>
       <h2><u>{data.date.gregorian.weekday.en}</u></h2>
       <div className="fajr">

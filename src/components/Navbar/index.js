@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from "./NavbarElements"
+import masjidlogo from '../../images/masjid-90px.png'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
         <Nav active={scroll} click={click}>
           <NavbarContainer>
             <NavLogo to="/">
-              <NavIcon />
+              <img height="70px" src={masjidlogo} alt="Masjid Logo"/>
               Henderson Masjid
             </NavLogo>
             <MobileIcon onClick={handleClick}>
