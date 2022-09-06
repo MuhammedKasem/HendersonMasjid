@@ -30,13 +30,14 @@
 
 @media screen and (max-width: 960px) {
  .prayerBox {
+  border: gold solid 3px;
    position: relative;
    width: 80%;
    height: 100%;
-   border: green solid 8px;
    border-radius: 30px;
-   background: white;
    align-self: center;
    text-align: center;
+   margin-top: 20px;
+   width: 100%
  } 
 }

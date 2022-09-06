@@ -21,9 +21,6 @@ function HeroSection() {
             <p> "Whoever builds a masjid for the sake of Allah Almighty, like a sparrow's nest or even smaller, Allah Almighty will build for him a house in Paradise."</p>
           </div>
           <PrayerTimes />
-          <div>
-          </div>
-
         </div>
       </div>
 

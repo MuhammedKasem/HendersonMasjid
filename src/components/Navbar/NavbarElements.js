@@ -16,8 +16,9 @@ top: 0;
 z-index: 999;
 
 @media screen and (max-width: 960px) {
-background: ${({ click }) => (click ? "fff" : "linear-gradient(#13e816, skyblue)")};
+// background: ${({ click }) => (click ? "fff" : "linear-gradient(#13e816, skyblue)")};
 transition: 0.8s all ease;
+justify-content: space-between;
 }
 `
 
@@ -76,12 +77,13 @@ export const NavMenu = styled.ul`
       opacity: 1;
       transition all 0.2s ease;
       background: #fff;
+      
   }
 `
 
 export const NavItem = styled.li`
   height: 80px;
-  color: white;
+  color: black;
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -102,6 +104,7 @@ export const NavLinks = styled(Link)`
     padding: 2rem;
     width: 100%;
     display: table;
+    color: black;
 
     &:hover{
       color: #ff4040;
