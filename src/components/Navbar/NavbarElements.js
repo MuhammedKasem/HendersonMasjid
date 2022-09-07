@@ -14,6 +14,7 @@ font-size: 1rem;
 position: sticky;
 top: 0;
 z-index: 999;
+border-bottom: 3px solid gold;
 
 @media screen and (max-width: 960px) {
 // background: ${({ click }) => (click ? "fff" : "linear-gradient(#13e816, skyblue)")};

@@ -14,7 +14,10 @@ function HeroSection() {
           <p id="raisedTxt">Total Raised: $220,000</p>
           <p id="goalTxt">Our Goal: $800,000</p>
           <div className="hero-btns">
-            <Link to="/donate"><Button fontBig big primary>Donate</Button></Link>
+            <Link to="/donate">
+              <button className="donateBtn">Donate Now</button>
+              </Link>
+
           </div>
           <div className="quoteContainer">
             <p> مَنْ بَنَى مَسْجِدًا لِلَّهِ كَمَفْحَصِ قَطَاةٍ أَوْ أَصْغَرَ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ</p>
