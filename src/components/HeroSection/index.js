@@ -8,6 +8,7 @@ function HeroSection() {
   return (
     <>
       <div className="hero-container">
+          <PrayerTimes />
         <div className="main-container">
           <h1>Donate Today!</h1>
           <p>Help support your masjid!</p>
@@ -20,7 +21,6 @@ function HeroSection() {
             <p> مَنْ بَنَى مَسْجِدًا لِلَّهِ كَمَفْحَصِ قَطَاةٍ أَوْ أَصْغَرَ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ</p>
             <p> "Whoever builds a masjid for the sake of Allah Almighty, like a sparrow's nest or even smaller, Allah Almighty will build for him a house in Paradise."</p>
           </div>
-          <PrayerTimes />
         </div>
       </div>
 
