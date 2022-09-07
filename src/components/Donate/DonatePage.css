@@ -23,7 +23,7 @@
 .paypalBtns {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: clamp(310px, 80%, 350px);
   justify-content: center;
   align-self: center;
   border: black solid 5px;
@@ -32,11 +32,11 @@
   background: lightgray;
 }
 
-@media screen and (max-width: 960px) {
-  .paypalBtns {
-    width: 100%;
-  }
-}
+/* @media screen and (max-width: 960px) { */
+/*   .paypalBtns { */
+/*     width: 100%; */
+/*   } */
+/* } */
 
 .inputPayment {
   width: 20%;
@@ -81,7 +81,7 @@
   flex-direction: column;
   width: 50%;
   border-radius: 15px;
-  text-align: left;
+  text-align: center;
   padding: 20px;
   gap: 20px;
   /* backdrop-filter: blur(20px); */

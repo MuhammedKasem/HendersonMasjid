@@ -40,6 +40,8 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   white-space: nowrap;
+  gap: 15px;
+  margin: 0 0.5rem 0 2rem; 
 `
 
 export const NavIcon = styled(FaMoon)`
