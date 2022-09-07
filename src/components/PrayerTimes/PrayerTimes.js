@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import "../PrayerTimes/PrayerTimes.css"
-import MasjidLogo from '../../images/masjid-80px.png'
 import Masjid150 from '../../images/masjid-150px.png'
 
 const PrayerTimes = () => {
@@ -13,7 +12,6 @@ const PrayerTimes = () => {
       })
       .then((data) => {
         setData(data['data']);
-        console.log(data);
       })
       .catch(err => {
         console.error(err)
@@ -58,7 +56,7 @@ const PrayerTimes = () => {
         <p>Isha:</p>
         <p className="time">{tConvert(data.timings.Isha)}</p>
       </div>
-    </div> : <div>Waiting for Prayer Times</div>
+    </div> : <div></div>
   )
 }
 
