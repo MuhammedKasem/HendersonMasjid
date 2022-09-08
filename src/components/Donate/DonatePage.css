@@ -32,18 +32,26 @@
   background: lightgray;
 }
 
-/* @media screen and (max-width: 960px) { */
-/*   .paypalBtns { */
-/*     width: 100%; */
-/*   } */
-/* } */
-
 .inputPayment {
-  width: 20%;
-  align-self: center;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 5px;
+ border: none;
+ border-radius: 15px;
+ padding: 5px;
+ background-color: #e8e8e8;
+ font-size: medium;
+ font-weight: bold;
+ max-width: 150px;
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+.inputPayment:focus {
+ outline-color: white;
+ place-content: "Enter your message!";
+}
+
+
+.currencySymbol {
+  font-size: 1.5rem;
 }
 
 .flexRow {
@@ -52,24 +60,43 @@
 }
 
 .presetAmt {
-  height: 70px;
-  width: 70px;
-  background-color: black;
-  border-radius: 10px;
-  color: white;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
-@media screen and (max-width: 960px) {
-  .presetAmt {
-    height: 50px;
-    width: 60px;
-  }
+.presetAmt:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.presetAmt:active {
+  transform: translateY(-1px);
 }
 
 .presetAmounts {
   display: flex;
+  flex-direction: column;
+  gap: 13px;
   justify-content: space-evenly;
   margin-bottom: 10px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-around; 
 }
 
 .heroTitle {
@@ -84,7 +111,6 @@
   text-align: center;
   padding: 20px;
   gap: 20px;
-  /* backdrop-filter: blur(20px); */
   background: white;
   height: 100%;
   min-height: 100%;

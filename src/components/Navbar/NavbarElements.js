@@ -86,7 +86,6 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-  height: 80px;
   color: black;
 
   @media screen and (max-width: 960px) {
@@ -102,6 +101,26 @@ export const NavLinks = styled(Link)`
   height: 100%;
   font-family: "Ubuntu", sans-serif;
   color: white;
+  position: relative;
+
+  &:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: gold;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
+
+
+  &:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  }
 
   @media screen and (max-width: 960px) {
     text-align: center;
