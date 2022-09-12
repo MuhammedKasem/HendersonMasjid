@@ -48,7 +48,8 @@ const DonateButton = () => {
             Or enter a Custom Amount!
         </div>
         <div className="flexRow">
-          <span className="currencySymbol">$</span><input className="inputPayment" type="number" onChange={(e) => { setPrice(e.target.value); console.log(price); }} value={price} />
+          <span className="currencySymbol">$</span>
+          <input className="inputPayment" type="number" onChange={(e) => { setPrice(e.target.value); console.log(price); }} value={price} />
         </div>
         <div ref={ref} className="buttonWrapper" style={{ minHeight: height }}>
           <PayPalScriptProvider options={{ "client-id": "AfBJ2Ey_RvEdKSmwVn5T1MvqpVBDbUtSVSFkO1MHvLg17XoyAia9zd9Hme5zR0er0oWb9-XCgkEDdpdF" }}>
