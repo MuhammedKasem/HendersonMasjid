@@ -1,6 +1,5 @@
 import React from "react"
 import "./HeroSection.css"
-import { Button } from "../ButtonElements"
 import PrayerTimes from "../PrayerTimes/PrayerTimes"
 import { Link } from "gatsby"
 

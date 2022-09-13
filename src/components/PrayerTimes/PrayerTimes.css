@@ -15,6 +15,7 @@
   color: white;
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .fajr, .dhuhr, .asr, .maghrib, .isha {
@@ -38,6 +39,5 @@
    align-self: center;
    text-align: center;
    margin-top: 20px;
-   width: 100%
  } 
 }

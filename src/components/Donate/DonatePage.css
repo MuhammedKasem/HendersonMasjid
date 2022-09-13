@@ -106,7 +106,7 @@
 .infoBox {
   display: flex;
   flex-direction: column;
-  width: clamp(320px, 50%, 700px);
+  width: clamp(320px, 90%, 700px);
   border-radius: 15px;
   text-align: center;
   padding: 20px;
