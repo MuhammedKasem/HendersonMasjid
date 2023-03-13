@@ -1,41 +1,49 @@
-import React, { useEffect } from 'react'
-import "../PrayerTimes/PrayerTimes.css"
-import Masjid150 from '../../images/masjid-150px.png'
+import React, { useEffect } from "react";
+import "../PrayerTimes/PrayerTimes.css";
+import Masjid150 from "../../images/masjid-150px.png";
 
 const PrayerTimes = () => {
-  let [data, setData] = React.useState(null);
+  let [data, setData] = React.useState(null)
 
   useEffect(() => {
-    fetch('https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=2s', { method: 'GET', mode: 'cors' })
-      .then((response) => {
-        return response.json();
+    fetch(
+      "https://api.aladhan.com/v1/timingsByCity?city=Henderson&country=United%20States&method=2s",
+      { method: "GET", mode: "cors" }
+    )
+      .then(response => {
+        return response.json()
       })
-      .then((data) => {
-        setData(data['data']);
+      .then(data => {
+        setData(data["data"])
       })
       .catch(err => {
         console.error(err)
-        data = null;
-      });
+        data = null
+      })
   }, [])
 
   function tConvert(time) {
     // Check correct time format and split into components
-    time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+    time = time
+      .toString()
+      .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time]
 
-    if (time.length > 1) { // If time format correct
-      time = time.slice(1);  // Remove full string match value
-      time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
-      time[0] = +time[0] % 12 || 12; // Adjust hours
+    if (time.length > 1) {
+      // If time format correct
+      time = time.slice(1) // Remove full string match value
+      time[5] = +time[0] < 12 ? " AM" : " PM" // Set AM/PM
+      time[0] = +time[0] % 12 || 12 // Adjust hours
     }
-    return time.join(''); // return adjusted time or original string
+    return time.join("") // return adjusted time or original string
   }
 
-  return (data ?
+  return data ? (
     <div className="prayerBox">
-      <img src={Masjid150} height="100px" width="80px"/>
+      <img src={Masjid150} height="100px" width="80px" />
       <h1>Prayer Times</h1>
-      <h2><u>{data.date.gregorian.weekday.en}</u></h2>
+      <h2>
+        <u>{data.date.gregorian.weekday.en}</u>
+      </h2>
       <div className="fajr">
         <p>Fajr:</p>
         <p className="time">{tConvert(data.timings.Fajr)}</p>
@@ -56,8 +64,10 @@ const PrayerTimes = () => {
         <p>Isha:</p>
         <p className="time">{tConvert(data.timings.Isha)}</p>
       </div>
-    </div> : <div></div>
-  )
+    </div>
+  ) : (
+    <div></div>
+  );
 }
 
-export default PrayerTimes
+export default PrayerTimes;

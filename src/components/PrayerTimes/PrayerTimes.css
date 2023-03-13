@@ -9,6 +9,7 @@
   padding: 20px;
   right: 0;
   gap: 5px;
+  align-self: center;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(10px);
@@ -18,7 +19,11 @@
   margin-bottom: 20px;
 }
 
-.fajr, .dhuhr, .asr, .maghrib, .isha {
+.fajr,
+.dhuhr,
+.asr,
+.maghrib,
+.isha {
   font-size: 1.5rem;
 }
 
@@ -30,14 +35,14 @@
 }
 
 @media screen and (max-width: 960px) {
- .prayerBox {
-  border: gold solid 3px;
-   position: relative;
-   width: 80%;
-   height: 100%;
-   border-radius: 30px;
-   align-self: center;
-   text-align: center;
-   margin-top: 20px;
- } 
+  .prayerBox {
+    border: gold solid 3px;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    align-self: center;
+    text-align: center;
+    margin-top: 20px;
+  }
 }

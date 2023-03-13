@@ -1,5 +1,5 @@
-import React from "react"
 import "./HeroSection.css"
+import * as React from "react"
 import PrayerTimes from "../PrayerTimes/PrayerTimes"
 import { Link } from "gatsby"
 
