@@ -4,10 +4,6 @@ import DonateButton from '../PaypalButton'
 import PrayerTimes from '../PrayerTimes/PrayerTimes.js'
 import { StaticImage } from "gatsby-plugin-image"
 import MasjidVideo from "../../images/masjidvideo.mp4"
-
-
-
-
 const DonatePage = () => {
   const [width, setWidth] = React.useState(0);
   const breakpoint = 620;
@@ -24,6 +20,7 @@ const DonatePage = () => {
   return (
     <>
       <div className="donate">
+        {width < breakpoint ? <div></div> : <PrayerTimes />}
         <div className="donateContainer">
           <h1 className="heroTitle">Donations</h1>
           <h2>Help support your community!</h2>
@@ -46,10 +43,8 @@ const DonatePage = () => {
             <a href="https://www.paypal.com/donate/?hosted_button_id=H7UGK2DWE28X8">
               <button className="donationBtn">Donate</button>
             </a>
-              {width < breakpoint ? <PrayerTimes /> : <div></div>}
           </div>
         </div>
-        {width < breakpoint ? <div></div> : <PrayerTimes />}
       </div>
     </>
   )

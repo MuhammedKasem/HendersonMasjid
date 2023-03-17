@@ -1,5 +1,5 @@
 .donate {
-  height: 100vh;
+  min-height: auto;
 }
 
 .donateContainer {
@@ -7,14 +7,14 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  background: url(../../images/donateimage.jpg) center center/ cover no-repeat;
+  background: url(../../images/Background.jpg) center center/cover no-repeat fixed;
   width: 100%;
   object-fit: contain;
-  margin-top: -80px;
   justify-content: center;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2);
-  height: 100%;
+  margin-top: -80px;
 }
+
 
 .donationBtn {
   display: inline-block;
@@ -132,11 +132,16 @@
 }
 
 .heroTitle {
-  margin-top: 80px;
+  margin-top: 10vh;
+  color: white;
+  font-size: 8vw;
+}
+
+.donateContainer > h2 {
+  color: white;
 }
 
 .infoBox {
-  margin-top: 40vh;
   display: flex;
   flex-direction: column;
   width: clamp(320px, 90%, 700px);

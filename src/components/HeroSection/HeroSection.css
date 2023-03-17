@@ -1,32 +1,30 @@
 
 .main-container {
-  background: url("../../images/masjidhero.jpg") center center/ cover no-repeat;
-  height: 100vh;
+  background: url("../../images/Background.jpg") center center/ cover no-repeat;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2);
-  object-fit: contain;
-  margin-top: -80px;
   text-align: center;
   gap: 10px;
+  margin-top: -80px;
 }
 
 @media screen and (max-width: 960px) {
-  .main-container {
-    height: 100%;
+  .sub-container {
   }
 }
 
-.main-container > h1 {
+.sub-container > h1 {
   color: #fff;
+  margin-top: 10vh;
   font-size: 100px;
-  margin-top: 80px;
 }
 
-.main-container > p {
+.sub-container > p {
   margin-top: 8px;
   color: #fff;
   font-size: 38px;
@@ -35,17 +33,17 @@
 }
 
 @media screen and (max-width: 960px) {
-  .main-container > h1 {
+  .sub-container > h1 {
     font-size: 70px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .main-container > h1 {
+  .sub-container > h1 {
     font-size: 60px;
   }
 
-  .main-container > p {
+  .sub-container > p {
     font-size: 30px;
   }
 }
@@ -86,7 +84,7 @@
     display: flex;
   }
 /* From uiverse.io */
-.donateBtn {
+/*.donateBtn {
  position: relative;
  font-size: 17px;
  text-transform: uppercase;
@@ -95,11 +93,10 @@
  display: inline-block;
  border-radius: 6em;
  transition: all .2s;
- border: none;
  font-family: inherit;
  font-weight: 500;
  color: gold;
- background-color: black;
+    background-color: black;
 }
 
 .donateBtn:hover {
@@ -132,4 +129,37 @@
 .donateBtn:hover::after {
  transform: scaleX(1.4) scaleY(1.6);
  opacity: 0;
+}*/
+
+.sub-container {
+    border-radius: 25px;
+    background-color: black;
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+.donateBtn {
+  margin-top: 10px;
+ display: inline-block;
+outline: 0;
+border:0;
+cursor: pointer;
+text-decoration: none;
+position: relative;
+color: white;
+background: black;
+line-height: 30px;
+border-radius: 40px;
+padding: 12px;
+font-size: 30px;
+font-weight: 400;
+box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+transition: all 0.2s;
+}
+
+
+.donateBtn:hover {
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
+}
+
