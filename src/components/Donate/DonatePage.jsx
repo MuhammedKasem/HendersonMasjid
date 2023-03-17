@@ -28,7 +28,6 @@ const DonatePage = () => {
             <video muted loop autoPlay={true}>
             <source src={MasjidVideo} type="video/mp4"/>
           </video>
-            <StaticImage src="../images/construction.jpg" className="image-item" alt=""/>
             <p>This is the opportunity of a lifetime to help create a center of worship for not only your generation, but for the generations to come InshAllah.</p>
             <div className="hadith">
             <blockquote>The Messenger of Allah (saw) said, "When a person dies, his deeds come to an end except for three: Sadaqah Jariyah (a continuous charity), or knowledge from which benefit is gained, or a righteous child who prays for him". [Muslim]</blockquote>
