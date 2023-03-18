@@ -25,7 +25,7 @@ const DonatePage = () => {
           <h1 className="heroTitle">Donations</h1>
           <h2>Help support your community!</h2>
           <div className="infoBox">
-            <video muted loop autoPlay={true}>
+            <video muted loop controls={true}>
             <source src={MasjidVideo} type="video/mp4"/>
           </video>
             <p>This is the opportunity of a lifetime to help create a center of worship for not only your generation, but for the generations to come InshAllah.</p>
