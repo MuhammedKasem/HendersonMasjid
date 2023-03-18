@@ -3,6 +3,7 @@ import * as React from "react"
 import PrayerTimes from "../PrayerTimes/PrayerTimes"
 import { Link } from "gatsby"
 import QuickEvents from "../QuickEvents/QuickEvents";
+import QuranVerse from "../QuranVerse/QuranVerse";
 
 const events = [
   {
@@ -59,6 +60,7 @@ function HeroSection() {
           </div>
           <PrayerTimes />
           <QuickEvents events={events}/>
+          <QuranVerse/>
         </div>
       </div>
 

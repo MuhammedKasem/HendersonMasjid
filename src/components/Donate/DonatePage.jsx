@@ -1,7 +1,7 @@
 import React from "react"
 import "./DonatePage.css"
-import DonateButton from '../PaypalButton'
 import PrayerTimes from '../PrayerTimes/PrayerTimes.js'
+import DonateButton from '../DonateButton/DonateButton.jsx'
 import { StaticImage } from "gatsby-plugin-image"
 import MasjidVideo from "../../images/masjidvideo.mp4"
 const DonatePage = () => {
@@ -39,6 +39,7 @@ const DonatePage = () => {
               To jump-start this project, several members of the community have generously purchased approximately 18 acres of land and designated it as Waqf for the benefit of the Muslim community. The land will house a 6,000 sqft masjid, a library, a school, a cemetery, a family park, and a soccer field. The land will provide a safe and private area for the community and is designed for future expansion as the community grows.
               The community center is conveniently located near Highway 85, Highway 39, and US 1. It will serve as a center for Muslims in both North Carolina and Virginia.
             </p>
+            <DonateButton/>
             <a href="https://www.paypal.com/donate/?hosted_button_id=H7UGK2DWE28X8">
               <button className="donationBtn">Donate</button>
             </a>
