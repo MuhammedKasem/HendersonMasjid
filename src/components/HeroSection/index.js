@@ -33,7 +33,8 @@ const events = [
     description: "Join us for a community iftar during Ramadan",
     date: "Wednesday, May 11th at 7:30pm",
     link: "/events/community-iftar"
-  }
+  },
+
 
 ];
 
@@ -45,7 +46,7 @@ function HeroSection() {
           <div className="sub-container">
         <h1>Donate Today!</h1>
           <p>Help support your masjid!</p>
-          <p id="raisedTxt">Total Raised: $45,907.60 </p>
+          <p id="raisedTxt">Total Raised: $98,926.62 </p>
           <p id="goalTxt">Phase #1 Goal: $800,000</p>
           <div className="hero-btns">
             <Link to="/donate">

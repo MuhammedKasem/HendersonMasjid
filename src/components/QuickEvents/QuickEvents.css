@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    border: 2px solid #f0ad4e;
+    border: 3px solid #f0ad4e;
     border-left: 0;
     border-radius: 0 10px 10px 0;
     margin-top: 50px;
@@ -72,7 +72,7 @@ h3 {
 
 @media screen and (max-width: 960px) {
     .quickEvents {
-        border: 2px solid #f0ad4e;
+        border: 3px solid #f0ad4e;
         position: relative;
         width: 80%;
         height: 100%;

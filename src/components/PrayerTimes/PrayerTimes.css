@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  border: gold solid 3px;
+  border: 3px solid #f0ad4e;
   border-right: 0;
   border-radius: 30px 0px 0px 30px;
   margin-top: 50px;
@@ -43,7 +43,7 @@
 }
 @media screen and (max-width: 960px) {
   .prayerBox {
-    border: gold solid 3px;
+    border: 3px solid #f0ad4e;
     position: relative;
     width: 80%;
     height: 100%;
