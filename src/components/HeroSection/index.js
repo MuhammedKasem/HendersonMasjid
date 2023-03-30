@@ -46,7 +46,7 @@ function HeroSection() {
           <div className="sub-container">
         <h1>Donate Today!</h1>
           <p>Help support your masjid!</p>
-          <p id="raisedTxt">Total Raised: $98,926.62 </p>
+          <p id="raisedTxt">Total Raised: $101,826.62 </p>
           <p id="goalTxt">Phase #1 Goal: $210,000</p>
           <div className="hero-btns">
             <Link to="/donate">
