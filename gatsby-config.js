@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-paypal`,
       options : {
-        clientId: "AUfYW36a-W81IrHKFFlsnDLFTT9dbYBnjoT3TC4DCvfKrw7mRdlb_ACx4jj_HauuU3ulbZ8UHoqtrs-e", 
+        clientId: "AUfYW36a-W81IrHKFFlsnDLFTT9dbYBnjoT3TC4DCvfKrw7mRdlb_ACx4jj_HauuU3ulbZ8UHoqtrs-e",
         currency:  "USD",
         vault:  false,
       }
@@ -22,7 +22,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-     `gatsby-plugin-image`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,14 +46,12 @@ module.exports = {
         icon: `src/images/FavIcon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `wz7mlrl6zaa3`,
+        accessToken: process.env.TOKEN,
+      },
+    },
   ],
 }
-
-
-// {
-//       resolve: `gatsby-source-contentful`,
-//       options: {
-//         spaceId: `wz7mlrl6zaa3`,
-//         accessToken: process.env.TOKEN,
-//       },
-//     },

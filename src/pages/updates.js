@@ -1,15 +1,16 @@
-import * as React from "react"
+import React from 'react';
+import Layout from '../components/layout';
+import BlogList from '../components/BlogList/BlogList';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-const Updates = () => (
-  <Layout>
-    <Seo title="Updates" />
-    <h1>Coming Soon!</h1>
-  </Layout>
-)
+const BlogPage = () => {
+    return (
+        <Layout>
+            <h1>Blog</h1>
+            <BlogList />
+        </Layout>
+    );
+};
 
-export const Head = () => <Seo title="Updates" />
+export default BlogPage;
 
-export default Updates
 

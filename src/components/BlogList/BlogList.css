@@ -1,0 +1,31 @@
+.blog-list {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-list__item {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    min-width: 500px;
+}
+
+.blog-list__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.blog-list__body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.blog-list__image {
+    width: 100%;
+    height: auto;
+position: relative;
+}
+
