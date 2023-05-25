@@ -22,7 +22,7 @@ const DonatePage = () => {
       <div className="donate">
         {width < breakpoint ? <div></div> : <PrayerTimes />}
         <div className="donateContainer">
-          <h1 className="heroTitle">Donations</h1>
+          <h1 className="donateTitle">Donations</h1>
           <h2>Help support your community!</h2>
           <div className="infoBox">
             <video muted loop controls={true} autoPlay={true}>

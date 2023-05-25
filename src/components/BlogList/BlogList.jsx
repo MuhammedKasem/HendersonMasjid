@@ -2,6 +2,7 @@ import React from 'react';
 import {graphql, Link, useStaticQuery} from 'gatsby';
 import {GatsbyImage} from 'gatsby-plugin-image';
 import '../BlogList/BlogList.css';
+import QuickEvents from "../QuickEvents/QuickEvents";
 
 const BlogList = () => {
     const data = useStaticQuery(graphql`
@@ -24,6 +25,8 @@ const BlogList = () => {
   `);
 
     return (
+        <div className="heroTitle">
+            <h1>Masjid Updates</h1>
         <div className="container">
         <div className="blog-list">
             {data.allContentfulBlog.edges.map(({node}) => {
@@ -38,17 +41,19 @@ const BlogList = () => {
                                             alt={node.title}
                                             placeholder="blurred"
                                         />
-                                    </div>
-                                ) : <h1>NULL</h1>}
-                                <h2 className="blog-list__title">
+                                     <h2 className="blog-list__title">
                                     {node.title}
                                 </h2>
+                                    </div>
+                                ) : <h1>NULL</h1>}
+
                             </div>
                     </Link>
                 );
             })}
         </div>
 
+        </div>
         </div>
     );
 };

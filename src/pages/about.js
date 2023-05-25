@@ -2,11 +2,12 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import AboutPage from "../components/About/AboutPage";
 
 const About = () => (
   <Layout>
     <Seo title="About Us" />
-    <h1>Coming Soon!</h1>
+      <AboutPage></AboutPage>
   </Layout>
 )
 

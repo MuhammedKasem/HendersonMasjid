@@ -5,7 +5,6 @@ import BlogList from '../components/BlogList/BlogList';
 const BlogPage = () => {
     return (
         <Layout>
-            <h1>Masjid Updates:</h1>
             <BlogList />
         </Layout>
     );
