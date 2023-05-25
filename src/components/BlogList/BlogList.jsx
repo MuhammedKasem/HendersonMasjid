@@ -16,7 +16,7 @@ const BlogList = () => {
               raw
             }
             image {
-              gatsbyImageData(width: 400, height: 400, layout: FIXED, placeholder: BLURRED)
+              gatsbyImageData(width: 300, height: 300, layout: FIXED, placeholder: BLURRED)
             }
           }
         }
@@ -25,9 +25,10 @@ const BlogList = () => {
   `);
 
     return (
+        <div className="container">
         <div className="heroTitle">
             <h1>Masjid Updates</h1>
-        <div className="container">
+        <div className="blogContainer">
         <div className="blog-list">
             {data.allContentfulBlog.edges.map(({node}) => {
                 return (
@@ -53,6 +54,7 @@ const BlogList = () => {
             })}
         </div>
 
+        </div>
         </div>
         </div>
     );

@@ -1,7 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import Layout from "../layout";
+
+import './BlogPost.css';  // Assuming you save the CSS in BlogPost.css in the same directory
 
 export const query = graphql`
   query($id: String!) {
@@ -19,19 +22,23 @@ export const query = graphql`
 
 const BlogPost = ({ data }) => {
     return (
-        <div>
-            <h1>{data.contentfulBlog.title}</h1>
-            {data.contentfulBlog.image.map((img, index) => (
-                <GatsbyImage
-                    key={index}
-                    image={img.gatsbyImageData}
-                    alt={data.contentfulBlog.title}
-                />
-            ))}
-            <div>
-                {documentToReactComponents(JSON.parse(data.contentfulBlog.content.raw))}
+        <Layout>
+
+            <div className="blogPost-container">
+                <h1 className="blogPost-title">{data.contentfulBlog.title}</h1>
+                {data.contentfulBlog.image.map((img, index) => (
+                    <GatsbyImage
+                        key={index}
+                        className="blogPost-image"
+                        image={img.gatsbyImageData}
+                        alt={data.contentfulBlog.title}
+                    />
+                ))}
+                <div className="blogPost-content">
+                    {documentToReactComponents(JSON.parse(data.contentfulBlog.content.raw))}
+                </div>
             </div>
-        </div>
+        </Layout>
     );
 };
 

@@ -15,7 +15,8 @@
 .aboutTitle {
     color: white;
     margin-top: 10vh;
-    font-size: 8vw;
+    font-size: 8vh;
+    padding: 10px;
 }
 
 .aboutBox {

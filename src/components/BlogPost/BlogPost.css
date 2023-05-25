@@ -1,0 +1,38 @@
+.blogPost-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.blogPost-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.blogPost-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.blogPost-content {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .blogPost-container {
+        width: 90%;
+    }
+
+    .blogPost-title {
+        font-size: 2em;
+    }
+
+    .blogPost-content {
+        font-size: 1em;
+    }
+}
