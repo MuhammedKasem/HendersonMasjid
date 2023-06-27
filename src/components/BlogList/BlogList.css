@@ -1,6 +1,7 @@
 .container {
     background: url(../../images/Background.jpg) center center/cover no-repeat fixed;
     width: 100%;
+    height: 100vh;
     justify-content: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2);
     margin-top: -80px;
